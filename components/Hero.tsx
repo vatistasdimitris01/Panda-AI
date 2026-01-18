@@ -29,7 +29,7 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="flex justify-center w-full px-4">
-        <CopyCommand command="curl -fsSL https://get.panda.ai | sh" />
+        <CopyCommand command="curl -fsSL https://pandacli.vercel.app/install.sh | sh" />
       </div>
     </div>
   );
