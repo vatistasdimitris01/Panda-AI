@@ -1,21 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { CopyCommand } from './CopyCommand';
 
 export const Hero: React.FC = () => {
-  const [leftArt, setLeftArt] = useState<string>('');
-  const [rightArt, setRightArt] = useState<string>('');
+  const leftArt = `
+                                        ░██            
+                                        ░██            
+░████████   ░██████   ░████████   ░████████  ░██████   
+░██    ░██       ░██  ░██    ░██ ░██    ░██       ░██  
+░██    ░██  ░███████  ░██    ░██ ░██    ░██  ░███████  
+░███   ░██ ░██   ░██  ░██    ░██ ░██   ░███ ░██   ░██  
+░██░█████   ░█████░██ ░██    ░██  ░█████░██  ░█████░██ 
+░██                                                    
+░██`;
 
-  useEffect(() => {
-    fetch('/left.md')
-      .then(res => res.text())
-      .then(text => setLeftArt(text))
-      .catch(console.error);
-      
-    fetch('/right.md')
-      .then(res => res.text())
-      .then(text => setRightArt(text))
-      .catch(console.error);
-  }, []);
+  const rightArt = `
+           ░██ ░██
+           ░██    
+ ░███████  ░██ ░██
+░██    ░██ ░██ ░██
+░██        ░██ ░██
+░██    ░██ ░██ ░██
+ ░███████  ░██ ░██`;
 
   return (
     <div className="w-full flex flex-col items-center gap-16 pt-10">
